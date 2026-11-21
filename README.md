@@ -1,112 +1,100 @@
 # CodeAlpha Python Programming Internship - Task 1: Hangman Game
 
-## 📝 Project Overview
-This repository contains a premium, interactive, console-based **Hangman Game** developed in Python. It randomly selects a word from a predefined pool of words, handles guess validations, displays a detailed visual progression using ASCII hangman stages, and tracks player stats in real-time.
+<div align="center">
 
-## 🎯 Objective
-The objective of this project is to implement standard Python programming structures (functions, collections, user interaction, strings, loops, and condition checks) within a complete, clean, and interactive environment. It serves as an exemplary project demonstrating foundational software development principles.
+![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Internship](https://img.shields.io/badge/Internship-CodeAlpha-FF6B6B?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
+
+</div>
+
+## 📝 Project Overview
+This repository contains a clean, robust, and interactive console-based **Hangman Game** developed in Python for the **CodeAlpha Python Programming Internship (Task 1)**. The game selects a secret word from a predefined pool of 5 words, handles letter-by-letter guessing with input validations, visualizes ASCII hangman gallows progression across 6 allowed incorrect attempts, and provides instant win/loss feedback with replay support.
+
+---
+
+## 🎯 Task Objectives & Compliance
+- [x] **Predefined Word List**: Uses a pool of predefined words (`"PYTHON"`, `"DEVELOPER"`, `"CODEALPHA"`, `"INTERNSHIP"`, `"PROGRAMMING"`).
+- [x] **Attempt Limiting**: Strictly limits incorrect guesses to **6** with visual ASCII stage tracking.
+- [x] **Console I/O**: Clean, formatted command-line interface with no external audio or GUI dependencies.
+- [x] **Key Concepts Implemented**: `random`, `while` loops, `if-else` conditionals, string manipulation, set collections, and lists.
+
+---
+
+## 📸 Execution Preview
+Below is the verified running screenshot of the Hangman Game in terminal:
+
+<div align="center">
+
+![Hangman Game Execution Preview](screenshots/run_preview.png)
+
+</div>
 
 ---
 
 ## ✨ Features
-- **Smart Game Engine**: Random word selection from an extensive collection.
-- **Detailed Visualizations**: 7 custom ASCII-art hangman stages reflecting wrong attempt progression.
-- **Input Validation**: Rejects invalid characters, numeric values, multiple inputs, and repeated guesses with clear, helpful alerts.
-- **Real-Time Trackers**: Displays word progress masked with underscores, remaining incorrect guesses, and alphabetical lists of guessed letters.
-- **Replay Option**: Keeps players engaged by prompting to restart another game immediately upon win or loss.
-- **Highly Readability**: Fully PEP8 compliant structure with comprehensive comments.
+- **Smart Game Engine**: Uses Python's `random.choice` to pick words dynamically.
+- **7-Stage ASCII Gallows**: Step-by-step visual feedback for every incorrect guess (0 to 6 attempts).
+- **Comprehensive Input Validation**:
+  - Checks for exact 1-character alphabetical input.
+  - Rejects numbers, special symbols, and multi-character strings.
+  - Detects duplicate guesses and alerts the user without penalizing attempts.
+- **Real-Time Game Dashboard**: Displays revealed letters masked with underscores, remaining attempts, and list of guessed characters.
+- **Graceful Termination**: Handles `Ctrl+C` / `EOF` cleanly without unhandled stack traces.
+- **Replay Loop**: Lets players start a new game round immediately.
 
 ---
 
 ## 🛠️ Technologies Used
-- **Language**: Python 3
-- **Core Modules**: `random`
+- **Language**: Python 3.x
+- **Core Standard Library**: `random`, `sys`
+- **Dependencies**: None (100% built-in standard library)
 
 ---
 
-## 📂 Folder Structure
+## 📂 Repository Structure
 ```text
 CodeAlpha_HangmanGame/
 │
-├── hangman.py          # Core Game Script (Execution Entrypoint)
-├── README.md           # Project Documentation
-└── screenshots/        # Directory containing sample run previews
+├── hangman.py              # Main Python Game Executable
+├── README.md               # Project Documentation & Guide
+├── .gitignore              # Git Ignore File
+└── screenshots/
+    └── run_preview.png     # Terminal Running Screenshot
 ```
 
 ---
 
-## 🚀 Installation & Getting Started
+## 🚀 How to Run Locally
 
 ### Prerequisites
-- **Python**: Make sure Python 3.x is installed. You can check your version in a command prompt or terminal using:
+- Python 3.8 or higher installed on your computer.
+- Check Python installation:
   ```bash
   python --version
   ```
 
-### Installation Steps
-1. Clone or download this repository:
+### Step-by-Step Execution
+1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/CodeAlpha_HangmanGame.git
+   git clone https://github.com/pragna3101/CodeAlpha_HangmanGame.git
    ```
-2. Navigate into the project folder:
+2. **Navigate into the directory:**
    ```bash
    cd CodeAlpha_HangmanGame
    ```
+3. **Run the game:**
+   ```bash
+   python hangman.py
+   ```
+4. **Gameplay:**
+   - Type a single letter (e.g., `A`, `E`, `P`) and press **Enter**.
+   - Guess all letters before the 6 incorrect attempts run out to win!
 
 ---
 
-## 🎮 How to Run
-Execute the main script via terminal or command prompt:
-```bash
-python hangman.py
-```
-
----
-
-## 📸 Sample Console Output
-
-```text
-========================================
-        WELCOME TO HANGMAN GAME!        
-========================================
-Try to guess the secret word letter by letter.
-
-       +---+
-       |   |
-           |
-           |
-           |
-           |
-    =========
-    
-Word: _ _ _ _ _ _ _ _ _ _
-Remaining Incorrect Attempts: 6
-Guessed Letters: None
-----------------------------------------
-Enter a letter to guess: E
-
-Good job! 'E' is in the secret word!
-
-       +---+
-       |   |
-           |
-           |
-           |
-           |
-    =========
-    
-Word: _ E _ E _ _ _ E _
-Remaining Incorrect Attempts: 6
-Guessed Letters: E
-----------------------------------------
-Enter a letter to guess: X
-Oops! 'X' is NOT in the secret word.
-```
-
----
-
-## 📈 Future Improvements
-- **Difficulty Settings**: Add game difficulty modes (Easy, Medium, Hard) that adjust the word lengths and allowed guess counts.
-- **Category Selection**: Allow players to choose custom categories (e.g., Animals, Movies, Tech).
-- **GUI Version**: Develop a desktop graphical interface using `tkinter` or a web version using Flask.
-- **Score System**: Maintain high-score statistics and win streaks inside a persistent local JSON file.
+## 👤 Author
+- **Pragna Zala**
+- **GitHub**: [@pragna3101](https://github.com/pragna3101)
+- **Internship**: CodeAlpha Python Programming Intern
